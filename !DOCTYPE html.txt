@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORCAN-INC | Construction & Contracting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #FF9D57;
+            --dark-charcoal: #222222;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --accent-purple: #7b2cbf;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--light-gray); color: #333; line-height: 1.6; }
+
+        nav {
+            background-color: rgba(34, 34, 34, 0.95);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary-orange);
+        }
+
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 30px; }
+        nav ul li a { text-decoration: none; color: var(--white); font-weight: bold; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary-orange); }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image_01d7dd.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero img { max-width: 500px; width: 100%; height: auto; margin-bottom: 20px; }
+
+        .slogan-diagonal {
+            position: absolute;
+            top: 100px;
+            right: 10%;
+            transform: rotate(-12deg);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            font-weight: bold;
+            border: 2px solid var(--primary-orange);
+            padding: 8px 15px;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+
+        section { padding: 100px 10%; }
+        .section-title { font-family: 'Montserrat', sans-serif; font-size: 32px; color: var(--dark-charcoal); text-align: center; margin-bottom: 50px; position: relative; text-transform: uppercase; }
+        .section-title::after { content: ''; width: 80px; height: 4px; background: var(--primary-orange); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; }
+        .card { background: var(--white); padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid var(--primary-orange); }
+
+        .specialties { background-color: var(--dark-charcoal); color: var(--white); text-align: center; border-top: 3px solid var(--primary-orange); border-bottom: 3px solid var(--primary-orange); }
+        .specialties-list { font-size: 22px; font-weight: 300; color: var(--primary-orange); margin-top: 20px; }
+
+        .works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .work-item { position: relative; overflow: hidden; border: 3px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .work-item img { width: 100%; display: block; transition: transform 0.5s ease; cursor: pointer; }
+        .work-item:hover img { transform: scale(1.1); }
+
+        .home-btn { position: fixed; bottom: 30px; right: 30px; background: var(--accent-purple); color: white; padding: 15px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 999; text-transform: uppercase; }
+
+        footer { background: var(--dark-charcoal); color: var(--white); padding: 60px 10%; text-align: center; }
+        .contact-info { border: 1px dashed var(--primary-orange); padding: 30px; display: inline-block; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            nav ul { gap: 15px; }
+            .slogan-diagonal { top: 80px; font-size: 14px; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Mission & Vision</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#works">Our Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="#home" class="home-btn">Inicio</a>
+
+    <section class="hero" id="home">
+        <div class="slogan-diagonal">Expect The Unexpected</div>
+        <img src="LOGO.jpeg" alt="MORCAN-INC">
+    </section>
+
+    <section id="mission">
+        <h2 class="section-title">Mission & Vision</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To provide high-quality construction and contracting services, ensuring safety, efficiency, and customer satisfaction in every project. We are committed to delivering reliable solutions, meeting deadlines, and contributing to the development of our community through professionalism and innovation.</p>
+            </div>
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To become a leading construction and contracting company in the region, recognized for excellence, integrity, and on-time project delivery. We aim to build long-term relationships with our clients and establish a strong, competitive presence in the construction industry.</p>
+            </div>
+        </div>
+        <center style="margin-top: 40px;">
+            <img src="mision y vision.jpeg" alt="Vision" style="max-width: 600px; width: 100%; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+        </center>
+    </section>
+
+    <section class="specialties">
+        <h2 class="section-title" style="color: white;">Our Specialties</h2>
+        <div class="specialties-list">
+            Nos enfocamos en remodelación interior exterior.<br>
+            Hacemos fundaciones. Pier and beam y slab.<br>
+            Framing todo tipo.<br>
+            Concrete work.
+        </div>
+    </section>
+
+    <section id="about" style="background: #e9e9e9;">
+        <div class="grid-container">
+            <div>
+                <img src="image_01d87d.jpg" alt="About US" style="width: 100%; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+            </div>
+            <div>
+                <h2 class="section-title" style="text-align: left; margin-left: 0;">About Us</h2>
+                <p>We are a construction and contracting company committed to delivering high-quality projects with professionalism, responsibility, and attention to detail. Our team is made up of skilled professionals who work together to transform ideas into solid and reliable structures.</p>
+                <br>
+                <p>With experience in residential, commercial, and industrial projects, we focus on meeting deadlines, maintaining safety standards, and exceeding our clients’ expectations. We believe that trust, transparency, and hard work are the foundation of every successful project.</p>
+                <br>
+                <p>Our goal is not only to build structures, but also to build long-term relationships with our clients, based on integrity, quality, and commitment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <h2 class="section-title">Our Recent Projects</h2>
+        
+        <h3 style="margin-bottom: 20px; color: var(--dark-charcoal);">STRUCTURAL & FOUNDATIONS</h3>
+        <div class="works-grid" style="margin-bottom: 50px;">
+            <div class="work-item"><img src="image_01d7dd.jpg" alt="Framing"></div>
+            <div class="work-item"><img src="image_01d8ba.jpg" alt="Foundation"></div>
+            <div class="work-item"><img src="image_01db62.jpg" alt="Trenching"></div>
+        </div>
+
+        <h3 style="margin-bottom: 20px; color: var(--dark-charcoal);">INTERIOR & FINISHING</h3>
+        <div class="works-grid">
+            <div class="work-item"><img src="image_01d840.jpg" alt="Drywall"></div>
+            <div class="work-item"><img src="image_01d860.jpg" alt="Plumbing"></div>
+            <div class="work-item"><img src="image_01d7fe.jpg" alt="Closet 1"></div>
+            <div class="work-item"><img src="image_01d81f.jpg" alt="Closet 2"></div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 class="section-title" style="color: white;">Contact Us</h2>
+        <div class="contact-info">
+            <p style="font-size: 22px; color: var(--primary-orange); margin-bottom: 15px;"><strong>Dallas, Texas</strong></p>
+            <p>Elmer199719@gmail.com</p>
+            <p>Mmorcaninc@gmail.com</p>
+            <br>
+            <p style="font-size: 18px;">972-839-1800</p>
+            <p style="font-size: 18px;">972-399-6232</p>
+        </div>
+        <div style="margin-top: 50px; opacity: 0.6; font-size: 13px;">
+            © 2026 MORCAN-INC | Engineering & Quality Construction
+        </div>
+    </footer>
+
+</body>
+</html>
